@@ -1,2 +1,4 @@
 # sample_exercise
-Frontend and backend practice
+Frontend and Backend practice
+
+Note that Frontend and Backend are unrelated
