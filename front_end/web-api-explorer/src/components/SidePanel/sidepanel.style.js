@@ -24,6 +24,7 @@ const styles = {
     display: "flex",
     flexDirection: "column",
     alignItems: "center",
+    overflowY: "scroll",
   },
   selectProviderMessage: {
     color: "white",

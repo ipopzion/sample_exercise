@@ -1,18 +1,25 @@
 import React from "react";
 import styles from "./sidepanel.style";
 import ApiCard from "../ApiCard/ApiCard";
+import useFetch from "../../services/useFetch";
 
 const SidePanel = ({ panelOpen, toggleOpen }) => {
-  const mockApi = {
-    name: "adobe.com",
-    detail: "Adobe Experience Manager (AEM) API",
-  };
+  const { data, isLoading, error } = useFetch("providers.json");
+
   return (
     <div style={styles.mainPanel(panelOpen)}>
       <div style={styles.leftOfPanel} onClick={toggleOpen}></div>
       <div style={styles.rightOfPanel}>
         <h2 style={styles.selectProviderMessage}>Select Provider</h2>
-        <ApiCard apiContent={mockApi} />
+        <>
+          {isLoading ? (
+            <div>Loading</div>
+          ) : error ? (
+            <div>Error</div>
+          ) : (
+            data?.data?.map((d) => <ApiCard apiName={d} />)
+          )}
+        </>
       </div>
     </div>
   );
