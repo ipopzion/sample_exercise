@@ -11,7 +11,7 @@ const App = () => {
   return (
     <div style={styles.body}>
       <div style={styles.container}>
-        <ExploreButton handleClick={toggleOpen} />
+        <ExploreButton handleClick={toggleOpen} cta="Explore web APIs" />
         <SidePanel panelOpen={panelOpen} toggleOpen={toggleOpen} />
       </div>
     </div>

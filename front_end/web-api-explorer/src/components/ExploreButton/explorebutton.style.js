@@ -8,6 +8,7 @@ const styles = {
     fontSize: SIZES.medium,
     borderRadius: SIZES.xSmall,
     padding: SIZES.small,
+    marginBottom: SIZES.large,
   },
 }
 
