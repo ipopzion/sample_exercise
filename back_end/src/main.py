@@ -36,6 +36,12 @@ async def get_rates(base: str = ""):
         return {"error": f"Invalid query param {base}"}
 
 
+@app.get("/historical-rates")
+async def get_history(base_currency: str = "", target_currency: str = "", start: str = "", end: str = ""):
+    db = next(get_db())
+    return crud.get_history(db, base_currency, target_currency, start, end)
+
+
 @app.on_event("startup")
 @repeat_every(seconds=INTERVAL)
 async def update_data():
