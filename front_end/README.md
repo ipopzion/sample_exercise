@@ -12,4 +12,5 @@
 
 * Make API calls to https://api.apis.guru/v2/{provider_name}.json to get web API
 
-* Services details
+
+Hosted here https://64bb7ca35797ba330c76c0b8--darling-cannoli-0cb239.netlify.app/
